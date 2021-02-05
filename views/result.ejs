@@ -1,8 +1,8 @@
 <%- include("./partials/header") %>
     <% if(movieData.Response=='False' ){%>
         <h1>Movie not found!</h1>
-        <%}else{%>
-            <div class="container">
+    <%}else{%>
+        <div class="container">
             <h1>Results are: </h1>
             <div class="row">
                 <% movieData['Search'].forEach(function(movie){%>
@@ -18,8 +18,8 @@
                         </div>
                     </div>
             
-                    <% })%>
-                <% } %>
+                <% })%>
+        <% } %>
 </div>
 </div>
 

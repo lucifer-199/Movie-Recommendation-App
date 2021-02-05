@@ -25,7 +25,8 @@ app.get("/result/:id",(req,res)=>{
         if(!error && response.statusCode==200){
             const data= JSON.parse(body)
             // res.render("quickView",{"movieData":data})
-            res.send(data)
+            // console.log(data)
+            res.render("quickView",{"movieData":data})
         }
         else{
             res.send("Ugh Fuck Off!")
@@ -40,7 +41,7 @@ app.get("/result",(req,res)=>{
             //Parsing JSON into JS object
             const data= JSON.parse(body)
             // res.send(data)
-            console.log(data)
+            // console.log(data)
             res.render("result",{"movieData":data})
         }
         else{
@@ -63,7 +64,7 @@ app.get("*",(request,response)=>{
 app.listen(process.env.PORT,()=>{
     console.log(`Server has started at port ${process.env.PORT}`)
 })
-
+//Random checks
 // app.get("/getmovies",(req,res)=>{
 //     const url= " http://www.omdbapi.com/?apikey=3af8b4a2&s=Avengers"
 //     request(url,function(error,response,body){

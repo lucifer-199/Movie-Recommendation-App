@@ -1,9 +1,12 @@
 <%- include("./partials/header") %>
+<head>
+    <link type="text/css" rel="stylesheet" href="/public/css/quickview.css">
+</head>
     <% if(movieData.Response=='False' ){%>
         <h1>Movie not found!</h1>
     <%}else{%>
         <div class="container">
-            <h1>Results are: </h1>
+            <h1>Search Results are: </h1>
             <div class="row">
                 <% movieData['Search'].forEach(function(movie){%>
                     <div class="card col-md-4 mt-4 mx-3" style="width: 18rem;">
